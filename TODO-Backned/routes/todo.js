@@ -1,5 +1,5 @@
-import { Router } from "express";
-import pool from "../db.js";
+const { Router } = require("express");
+const pool = require("../db.js");
 
 const router = Router();
 
@@ -20,3 +20,5 @@ router.post("/", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
+
+module.exports = router;
