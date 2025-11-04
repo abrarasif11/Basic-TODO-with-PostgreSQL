@@ -11,6 +11,7 @@ dotenv.config();
 // Middlewares
 app.use(cors());
 app.use(express.json());
+
 app.use("/todos", todoRoutes);
 app.get("/", (req, res) => {
   res.send("Todo Server");
